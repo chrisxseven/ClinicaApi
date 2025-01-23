@@ -1,4 +1,4 @@
-package com.clinica.api.model;
+package com.clinica.api.datasource.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
