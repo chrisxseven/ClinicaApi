@@ -31,4 +31,9 @@ public class PsicologaController {
     public void salvarPsicologa(@RequestBody Psicologa psicologa) {
         psicologaRepository.save(psicologa);
     }
+
+    @DeleteMapping(path = "psicologa/delete/{id}")
+    public void deletarPsicologa(@PathVariable (name = "id", required = true) Long id) {
+        psicologaRepository.deleteById(id);
+    }
 }
