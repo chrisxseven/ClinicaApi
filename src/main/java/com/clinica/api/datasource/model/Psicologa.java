@@ -1,18 +1,22 @@
 package com.clinica.api.datasource.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-@Entity(name = "psicologa")
-public class Psicologa {
+@Entity
+@Table(name = "psicologa")
+public class Psicologa implements Serializable{
+
+    @Serial
+    private static final long serialVersionUID = 8953580099424581835L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "nome")
     private String nome;
     private LocalDate idade;
 
@@ -22,15 +26,7 @@ public class Psicologa {
     @Column(name = "id_paciente")
     private Long idPaciente;
 
-    public Psicologa(String nome, LocalDate idade, String codigoRegistro, Long idPaciente) {
-        this.nome = nome;
-        this.idade = idade;
-        this.codigoRegistro = codigoRegistro;
-        this.idPaciente = idPaciente;
-    }
-
-    @SuppressWarnings("unused")
-    private Psicologa() {
+    public Psicologa() {
         
     }
 

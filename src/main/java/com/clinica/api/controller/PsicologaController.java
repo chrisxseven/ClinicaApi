@@ -2,9 +2,13 @@ package com.clinica.api.controller;
 
 
 import com.clinica.api.datasource.model.Psicologa;
+import com.clinica.api.exception.PsicologaNotFoundException;
 import com.clinica.api.repository.PsicologaRepository;
+import com.clinica.api.resource.model.PsicologaResource;
+import com.clinica.api.service.BuscarPsicologaPorIdService;
+import com.clinica.api.service.BuscarPsicologaService;
+import com.clinica.api.service.CadastroPsicologa;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,25 +19,32 @@ import java.util.Optional;
 public class PsicologaController {
 
     @Autowired
-    private PsicologaRepository psicologaRepository;
+    private BuscarPsicologaService serviceBuscar;
+
+    @Autowired
+    private CadastroPsicologa serviceCadastro;
+
+    @Autowired
+    private BuscarPsicologaPorIdService serviceBuscarPorId;
 
     @GetMapping(path = "/psicologas")
-    public List<Psicologa> buscarPsicologa() {
-       return psicologaRepository.findAll();
+    public List<Psicologa> buscarPsicologas() {
+       return serviceBuscar.buscarTodasAsPsicologas();
     }
     @GetMapping(path = "/psicologa/id/{id}")
-    public Optional<Psicologa> buscarPsicologaPorId(
-            @PathVariable (name = "id", required = true) Long id) {
-       return psicologaRepository.findById(id);
+    public Psicologa buscarPsicologaPorId(
+            @PathVariable (name = "id", required = true) Long id) throws PsicologaNotFoundException {
+       return serviceBuscarPorId.buscarPorId(id);
     }
 
     @PostMapping(path = "psicologa/save")
-    public void salvarPsicologa(@RequestBody Psicologa psicologa) {
-        psicologaRepository.save(psicologa);
+    public void salvarPsicologa(@RequestBody PsicologaResource psicologa) {
+        serviceCadastro.cadastro(psicologa);
+
     }
 
     @DeleteMapping(path = "psicologa/delete/{id}")
-    public void deletarPsicologa(@PathVariable (name = "id", required = true) Long id) {
-        psicologaRepository.deleteById(id);
+    public void deletarPsicologa(@PathVariable (name = "id", required = true) Long id) throws PsicologaNotFoundException {
+        serviceBuscarPorId.deletarPorId(id);
     }
 }
