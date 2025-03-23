@@ -1,4 +1,4 @@
-package com.clinica.api.service.paciente2;
+package com.clinica.api.service.paciente;
 
 import com.clinica.api.datasource.model.Paciente;
 import com.clinica.api.exception.PacienteResourceException;
@@ -27,7 +27,7 @@ public class CadastroPaciente {
                     .conversor(pacienteResource);
             pacienteRepository.saveAndFlush(paciente);
         } catch (PacienteResourceException e) {
-            LOG.error("Erro ao salvar psicolog: " + e.getMessage(), e);
+            LOG.error("Erro ao salvar paciente: " + e.getMessage(), e);
         }
     }
 }
