@@ -3,19 +3,17 @@ package com.clinica.api.controller;
 
 import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.exception.PsicologaNotFoundException;
-import com.clinica.api.repository.PsicologaRepository;
 import com.clinica.api.resource.model.PsicologaResource;
-import com.clinica.api.service.BuscarPsicologaPorIdService;
-import com.clinica.api.service.BuscarPsicologaService;
-import com.clinica.api.service.CadastroPsicologa;
+import com.clinica.api.servicepsi.BuscarPsicologaPorIdService;
+import com.clinica.api.servicepsi.BuscarPsicologaService;
+import com.clinica.api.servicepsi.CadastroPsicologa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/psi")
 public class PsicologaController {
 
     @Autowired
