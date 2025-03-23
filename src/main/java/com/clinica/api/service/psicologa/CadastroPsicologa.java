@@ -4,6 +4,7 @@ import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.exception.PsicologaResourceException;
 import com.clinica.api.repository.PsicologaRepository;
 import com.clinica.api.resource.model.PsicologaResource;
+import com.clinica.api.service.psi2.PsicologaConversor;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
