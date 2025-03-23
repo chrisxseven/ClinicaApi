@@ -4,9 +4,9 @@ package com.clinica.api.controller;
 import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.exception.PsicologaNotFoundException;
 import com.clinica.api.resource.model.PsicologaResource;
-import com.clinica.api.servicepsi.BuscarPsicologaPorIdService;
-import com.clinica.api.servicepsi.BuscarPsicologaService;
-import com.clinica.api.servicepsi.CadastroPsicologa;
+import com.clinica.api.service.psicologa.BuscarPsicologaPorIdService;
+import com.clinica.api.service.psicologa.BuscarPsicologaService;
+import com.clinica.api.service.psicologa.CadastroPsicologa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
