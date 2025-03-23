@@ -9,6 +9,9 @@ public class PacienteResource {
     @JsonProperty("nome_paciente")
     private String nome;
 
+    @JsonProperty
+    private String idPaciente;
+
     @JsonProperty("data_nascimento")
     private LocalDate dataNascimento;
 
@@ -23,6 +26,7 @@ public class PacienteResource {
 
     public PacienteResource(String nome, LocalDate data_nascimento, String cpf, String telefone, LocalDate data_cadastro) {
         this.nome = nome;
+        this.idPaciente = idPaciente;
         this.dataNascimento = data_nascimento;
         this.cpfPaciente = cpf;
         this.telefone = telefone;
@@ -36,6 +40,10 @@ public class PacienteResource {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getIdPaciente() { return idPaciente; }
+
+    public void setIdPaciente(String idPaciente) {}
 
     public LocalDate getDataNascimento() {
         return dataNascimento;
