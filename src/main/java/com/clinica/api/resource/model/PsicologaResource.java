@@ -7,20 +7,16 @@ public class PsicologaResource {
     @JsonProperty("nome_psicologa")
     private String nome;
 
-    @JsonProperty("idade")
-    private String idade;
+    @JsonProperty("cr_psi")
+    private String crPsi;
 
-    @JsonProperty("codigo_registro")
-    private String codigoRegistro;
+    @JsonProperty("id_psicologa")
+    private String idPsicologa;
 
-    @JsonProperty("id_paciente")
-    private String idPaciente;
-
-    public PsicologaResource(String nome, String idade, String codigoRegistro, String idPaciente) {
+    public PsicologaResource(String nome, String crPsi, String idPsicologa) {
         this.nome = nome;
-        this.idade = idade;
-        this.codigoRegistro = codigoRegistro;
-        this.idPaciente = idPaciente;
+        this.crPsi = crPsi;
+        this.idPsicologa = idPsicologa;
     }
 
     public String getNome() {
@@ -31,33 +27,23 @@ public class PsicologaResource {
         this.nome = nome;
     }
 
-    public String getIdade() {
-        return idade;
+    public String getCrPsi() { return crPsi; }
+
+    public void setCrPsi(String crPsi) {
+        this.crPsi = crPsi;
     }
 
-    public void setIdade(String idade) {
-        this.idade = idade;
+    public String getIdPsicologa() {
+        return idPsicologa;
     }
 
-    public String getCodigoRegistro() {
-        return codigoRegistro;
-    }
-
-    public void setCodigoRegistro(String codigoRegistro) {
-        this.codigoRegistro = codigoRegistro;
-    }
-
-    public String getIdPaciente() {
-        return idPaciente;
-    }
-
-    public void setIdPaciente(String idPaciente) {
-        this.idPaciente = idPaciente;
+    public void setIdPsicologa(String idPsicologa) {
+        this.idPsicologa = idPsicologa;
     }
 
     @Override
     public String toString() {
-        return "PsicologaResource [nome=" + nome + ", idade=" + idade + ", codigoRegistro=" + codigoRegistro + ", idPaciente=" + idPaciente + "]";
+        return "PsicologaResource [nome=" + nome + ", crPsi=" + crPsi + ", idPsicologa=" + idPsicologa + "]";
     }
 }
 
