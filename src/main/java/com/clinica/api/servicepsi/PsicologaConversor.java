@@ -1,11 +1,9 @@
-package com.clinica.api.service;
+package com.clinica.api.servicepsi;
 
 import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.exception.PsicologaResourceException;
 import com.clinica.api.resource.model.PsicologaResource;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
 
 @Component
 public class PsicologaConversor {
