@@ -2,25 +2,37 @@ API para Clínica de Psicologia
 Este projeto é uma API REST desenvolvida em Java utilizando Spring Boot, com banco de dados PostgreSQL e documentação integrada com Swagger. A API tem como objetivo gerenciar informações de uma clínica de psicologia, permitindo operações de CRUD para psicólogos e pacientes.
 
 🔹 Funcionalidades
+
 Psicólogos:
 
 GET /psicologas → Lista todos as psicólogas cadastrados.
+
 GET /psicologa/id/{id} → Lista as psicólogas por id
+
 POST /psicologa/save → Cadastra uma novo psicóloga.
+
 DELETE /psicologa/delete/{id} → Remove uma psicóloga pelo ID.
 
-
 Pacientes:
+
 GET /pacientes → Lista todos os pacientes cadastrados.
+
 GET /paciente/id/{id} → Lista os pacientes por id
+
 POST /paciente/save → Cadastra um novo paciente.
+
 DELETE /paciente/delete/{id} → Remove um paciente pelo ID.
 
 🛠 Tecnologias Utilizadas
+
 Java 17
+
 Spring Boot 3
+
 Spring Data JPA
+
 PostgreSQL
+
 Swagger (Springdoc OpenAPI)
 
 📄 Documentação
