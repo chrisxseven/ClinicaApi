@@ -42,6 +42,7 @@ Acesse a documentação no navegador após rodar a aplicação:
 🔗 http://localhost:8080/swagger-ui.html
 
 Este projeto pode ser expandido para incluir autenticação, agendamentos de consultas, envio de notificações e outras funcionalidades conforme a necessidade da clínica. 🚀
+
 ![SharedScreenshot](https://github.com/user-attachments/assets/9a1810ff-8124-4783-8567-1b524eb65d9d)
 
 
