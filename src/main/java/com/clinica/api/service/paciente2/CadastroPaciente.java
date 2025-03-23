@@ -1,4 +1,4 @@
-package com.clinica.api.service.paciente;
+package com.clinica.api.service.paciente2;
 
 import com.clinica.api.datasource.model.Paciente;
 import com.clinica.api.exception.PacienteResourceException;
