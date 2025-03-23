@@ -20,6 +20,9 @@ public class Paciente implements Serializable {
 
     private String nome;
 
+    @Column(name = "id_paciente")
+    private Long idPaciente;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
@@ -45,6 +48,14 @@ public class Paciente implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Long getIdPaciente() {
+        return idPaciente;
+    }
+
+    public void setIdPaciente(Long id) {
+        this.idPaciente = idPaciente;
     }
 
     public LocalDate getDataNascimento() {
