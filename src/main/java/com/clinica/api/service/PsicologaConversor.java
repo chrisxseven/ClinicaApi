@@ -18,13 +18,11 @@ public class PsicologaConversor {
                 throw new PsicologaResourceException("Resource não pode ser nulo.");
             }
 
-            Long idPaciente = checkIdPaciente(psicologaResource.getIdPaciente());
-            LocalDate idade = checkIdade(psicologaResource.getIdade());
+            Long idPsicologa = checkIdPsicologa(psicologaResource.getIdPsicologa());
 
             Psicologa psicologa = new Psicologa();
-            psicologa.setIdPaciente(idPaciente);
-            psicologa.setIdade(idade);
-            psicologa.setCodigoRegistro(psicologaResource.getCodigoRegistro());
+            psicologa.setIdPsicologa(idPsicologa);
+            psicologa.setCrPsi(psicologaResource.getCrPsi());
             psicologa.setNome(psicologaResource.getNome());
 
             return psicologa;
@@ -34,25 +32,14 @@ public class PsicologaConversor {
         }
     }
 
-    private Long checkIdPaciente(String idPaciente) {
-        if (idPaciente == null || idPaciente.isBlank()) {
-            throw new IllegalArgumentException("ID do paciente não pode ser nulo ou vazio.");
+    private Long checkIdPsicologa(String idPsicologa) {
+        if (idPsicologa == null || idPsicologa.isBlank()) {
+            throw new IllegalArgumentException("ID da Psicologa não pode ser nulo ou vazio.");
         }
         try {
-            return Long.parseLong(idPaciente);
+            return Long.parseLong(idPsicologa);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("ID do paciente inválido: " + idPaciente);
-        }
-    }
-
-    private LocalDate checkIdade(String idade) {
-        if (idade == null || idade.isBlank()) {
-            throw new IllegalArgumentException("Idade não pode ser nula ou vazia.");
-        }
-        try {
-            return LocalDate.parse(idade);
-        } catch (Exception e) {
-            throw new IllegalArgumentException("Formato de data inválido: " + idade);
+            throw new IllegalArgumentException("ID da Psicologa inválido: " + idPsicologa);
         }
     }
 }
