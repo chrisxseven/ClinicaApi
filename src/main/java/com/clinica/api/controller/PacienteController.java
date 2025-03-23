@@ -2,11 +2,10 @@ package com.clinica.api.controller;
 
 import com.clinica.api.datasource.model.Paciente;
 import com.clinica.api.exception.PacienteNotFoundException;
-import com.clinica.api.exception.PsicologaNotFoundException;
 import com.clinica.api.resource.model.PacienteResource;
-import com.clinica.api.servicepaciente.BuscarPacientePorId;
-import com.clinica.api.servicepaciente.BuscarPacienteService;
-import com.clinica.api.servicepaciente.CadastroPaciente;
+import com.clinica.api.service.paciente.BuscarPacientePorId;
+import com.clinica.api.service.paciente.BuscarPacienteService;
+import com.clinica.api.service.paciente.CadastroPaciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
