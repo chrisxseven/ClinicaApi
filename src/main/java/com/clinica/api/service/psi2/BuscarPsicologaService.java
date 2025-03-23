@@ -1,4 +1,4 @@
-package com.clinica.api.service.psicologa;
+package com.clinica.api.service.psi2;
 
 import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.repository.PsicologaRepository;
