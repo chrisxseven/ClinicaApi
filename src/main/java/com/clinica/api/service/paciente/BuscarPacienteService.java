@@ -1,4 +1,4 @@
-package com.clinica.api.servicepaciente;
+package com.clinica.api.service.paciente;
 
 import com.clinica.api.datasource.model.Paciente;
 import com.clinica.api.repository.PacienteRepository;

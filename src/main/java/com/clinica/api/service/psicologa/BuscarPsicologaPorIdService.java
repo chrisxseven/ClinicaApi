@@ -1,4 +1,4 @@
-package com.clinica.api.servicepsi;
+package com.clinica.api.service.psicologa;
 
 import com.clinica.api.datasource.model.Psicologa;
 import com.clinica.api.exception.PsicologaNotFoundException;
