@@ -5,14 +5,16 @@ Este projeto é uma API REST desenvolvida em Java utilizando Spring Boot, com ba
 Psicólogos:
 
 GET /psicologas → Lista todos as psicólogas cadastrados.
+GET /psicologa/id/{id} → Lista as psicólogas por id
 POST /psicologa/save → Cadastra uma novo psicóloga.
-DELETE /psicologa/{id} → Remove uma psicóloga pelo ID.
+DELETE /psicologa/delete/{id} → Remove uma psicóloga pelo ID.
 
-*
+
 Pacientes:
 GET /pacientes → Lista todos os pacientes cadastrados.
-POST /pacientes → Cadastra um novo paciente.
-DELETE /pacientes/{id} → Remove um paciente pelo ID.
+GET /paciente/id/{id} → Lista os pacientes por id
+POST /paciente/save → Cadastra um novo paciente.
+DELETE /paciente/delete/{id} → Remove um paciente pelo ID.
 
 🛠 Tecnologias Utilizadas
 Java 17
@@ -28,5 +30,6 @@ Acesse a documentação no navegador após rodar a aplicação:
 🔗 http://localhost:8080/swagger-ui.html
 
 Este projeto pode ser expandido para incluir autenticação, agendamentos de consultas, envio de notificações e outras funcionalidades conforme a necessidade da clínica. 🚀
-![1](https://github.com/user-attachments/assets/1ca1312a-0a02-45ff-b47c-14141251a5d3)
+![SharedScreenshot](https://github.com/user-attachments/assets/9a1810ff-8124-4783-8567-1b524eb65d9d)
+
 
