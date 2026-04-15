@@ -36,8 +36,7 @@ public class PacienteConversor {
 
         private Long checkIdPaciente(String idPaciente) {
             if (idPaciente == null || idPaciente.isBlank()) {
-                throw new IllegalArgumentException("ID do paciente não pode ser nulo ou vazio.");
-            }
+                return null;            }
             try {
                 return Long.parseLong(idPaciente);
             } catch (NumberFormatException e) {
