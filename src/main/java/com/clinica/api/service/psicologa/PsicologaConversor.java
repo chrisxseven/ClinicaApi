@@ -32,7 +32,7 @@ public class PsicologaConversor {
 
     private Long checkIdPsicologa(String idPsicologa) {
         if (idPsicologa == null || idPsicologa.isBlank()) {
-            throw new IllegalArgumentException("ID da Psicologa não pode ser nulo ou vazio.");
+            return null;
         }
         try {
             return Long.parseLong(idPsicologa);
