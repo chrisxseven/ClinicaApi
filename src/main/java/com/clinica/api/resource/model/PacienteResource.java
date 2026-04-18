@@ -24,13 +24,21 @@ public class PacienteResource {
     @JsonProperty("data_cadastro")
     private LocalDate dataCadastro;
 
-    public PacienteResource(String nome, LocalDate data_nascimento, String cpf, String telefone, LocalDate data_cadastro) {
+    @JsonProperty("tipo_terapia")
+    private String tipoTerapia;
+
+    public PacienteResource(String nome, LocalDate data_nascimento, String cpf, String telefone, LocalDate data_cadastro, String tipo_terapia) {
         this.nome = nome;
         this.idPaciente = idPaciente;
         this.dataNascimento = data_nascimento;
         this.cpfPaciente = cpf;
         this.telefone = telefone;
         this.dataCadastro = data_cadastro;
+        this.tipoTerapia = tipo_terapia;
+    }
+
+    public PacienteResource() {
+
     }
 
     public String getNome() {
@@ -77,8 +85,24 @@ public class PacienteResource {
         this.dataCadastro = dataCadastro;
     }
 
+    public String getTipoTerapia() {
+        return tipoTerapia;
+    }
+
+    public void setTipoTerapia(String tipoTerapia) {
+        this.tipoTerapia = tipoTerapia;
+    }
+
     @Override
     public String toString() {
-        return "PacienteResource [nome =" + nome + ", dataNascimento=" + dataNascimento  + ", cpfPaciente=" + cpfPaciente + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + "]";
+        return "PacienteResource{" +
+                "nome='" + nome + '\'' +
+                ", idPaciente='" + idPaciente + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", cpfPaciente='" + cpfPaciente + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", dataCadastro=" + dataCadastro +
+                ", tipoTerapia='" + tipoTerapia + '\'' +
+                '}';
     }
 }
